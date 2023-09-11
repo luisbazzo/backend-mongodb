@@ -3,7 +3,6 @@ import express from 'express';
 //Import das rotas da aplicação
 import rotasPrestadores from './routes/prestador.js';   
 
-
 const app = express();
 const port = 4000;
 

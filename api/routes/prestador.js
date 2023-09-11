@@ -14,8 +14,7 @@ const nomeCollection = 'prestadores';
 
 router.get('/', async(req, res)=>{
     try{
-        db.collection(nomeCollection).find().sort({razao_social: 1})
-        .toArray((err, docs) => {
+        db.collection(nomeCollection).find().sort({razao_social: 1}).toArray((err, docs) => {
             if(!err){
                 res.status(200).json(docs)
             }
