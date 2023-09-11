@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "pm2 start api/index.js"
+    "dev": "pm2 start api/index.js -f",
+    "down": "pm2 delete all"
   },
   "keywords": [
     "nodejs",

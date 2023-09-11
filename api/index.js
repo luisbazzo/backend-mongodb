@@ -1,7 +1,5 @@
+//import rotasPrestadores from './routes/prestador.js';   
 import express from 'express';
-
-//Import das rotas da aplicação
-import rotasPrestadores from './routes/prestador.js';   
 
 const app = express();
 const port = 4000;
@@ -15,7 +13,8 @@ app.use('/', express.static('public'));
 app.use('/favicon.ico', express.static('public/images/pc_icon.ico'))
 
 //Rotas de API
-app.use('/api/prestadores', rotasPrestadores);
+
+//app.use('/api/prestadores', rotasPrestadores);
 app.get('/api', (req, res) => {
     res.status(200).json(
         {
