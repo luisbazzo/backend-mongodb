@@ -1,13 +1,21 @@
 use('FatecItu')
 
 db.prestadores.insertOne({
-    "cnpj": "451507930100012",
-    "razao_social": "JOSUÉ ALVES ME",
-    "cnae_fiscal": 451510,
-    "nome_fantasia": "JOSUÉ BOY",
-    "data_inicio_atividade": "2020-08-01",
+    "cnpj": "849392382821232",
+    "razao_social": "JUCA JUCA ME",
+    "cnae_fiscal": 412210,
+    "nome_fantasia": "",
+    "data_inicio_atividade": "2009-12-14",
     "localizacao":{
         "type":"Point",
-        "coordinates": [-23.0533, -47.1023]
+        "coordinates": [-93.0423, -69.1123]
     }
 })
+
+use('FatecItu')
+db.prestadores.deleteOne({nome_fantasia:"CHICAO DA IBM"});
+
+use('FatecItu')
+db.alimentos.insertOne({
+    "nome":"maçã",
+    "qtde":10})

@@ -1,0 +1,61 @@
+//Teste das Requisições REST dos prestadores
+
+@baseURL = http://localhost:4000/api/prestadores
+
+###
+//GET - Lista todos os registros
+GET {{baseURL}}
+Content-Type: application/json
+
+###
+//GET - Lista um registro pelo id
+GET {{baseURL}}/id/64ff30870444128a36e3f4aa
+
+###
+//GET - Lista um registro pela razao
+GET {{baseURL}}/razao/alves
+Content-Type: application/json
+
+###
+//DELETE - Apaga um registro pelo id
+DELETE {{baseURL}}/65086411e780a21320b70091
+Content-Type: application/json
+
+###
+//POST - Insere um novo registro
+
+POST {{baseURL}}
+Content-type: application/json
+
+{
+    "cnpj": "13829219823712",
+    "razao_social": "RUYTER POUBEL ME",
+    "cnae_fiscal": 439510,
+    "nome_fantasia": "",
+    "data_inicio_atividade": "1939-08-01",
+    "localizacao":{
+        "type":"Point",
+        "coordinates": [-53.0533, -67.1023]
+    }
+}
+
+###
+//UPDATE
+PUT {{baseURL}}
+Content-Type: application/json
+
+{
+    "_id": "65085972500bc5251f741680",
+    "cnpj": "45150718000149",
+    "razao_social": "SERVIÇOS MOTOGIRL LTDA.",
+    "cnae_fiscal": 451510,
+    "nome_fantasia": "MOTOGRIL",
+    "data_inicio_atividade": "2020-08-01",
+    "localizacao": {
+        "type": "Point",
+        "coordinates": [
+            -23.2904,
+            -47.2963
+        ]
+        }
+}

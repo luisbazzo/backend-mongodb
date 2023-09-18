@@ -1,4 +1,5 @@
-//import rotasPrestadores from './routes/prestador.js';   
+import rotasPrestadores from './routes/prestador.js'; 
+//import rotasAlimentos from './routes/alimentos.js';
 import express from 'express';
 
 const app = express();
@@ -14,7 +15,8 @@ app.use('/favicon.ico', express.static('public/images/pc_icon.ico'))
 
 //Rotas de API
 
-//app.use('/api/prestadores', rotasPrestadores);
+app.use('/api/prestadores', rotasPrestadores);
+//app.use('/api/alimentos', rotasAlimentos);
 app.get('/api', (req, res) => {
     res.status(200).json(
         {

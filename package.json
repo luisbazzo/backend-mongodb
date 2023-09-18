@@ -4,6 +4,10 @@
   "description": "Backend em Node integrado ao MondoDB",
   "main": "api/index.js",
   "type": "module",
+  "engines": {
+    "node": "16.x",
+    "npm": "9.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "pm2 start api/index.js -f",
@@ -19,6 +23,7 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-validator": "^7.0.1",
     "mongodb": "^4.1.0",
     "pm2": "^5.3.0"
   }
